@@ -1,15 +1,14 @@
 <template>
   <div id="app">
     <swiper ref="mySwiper" :options="swiperOption">
-      <swiper-slide class="first">
+      <swiper-slide class="first" v-show="currentIndex===0">
         <slide1/>
       </swiper-slide>
-      <swiper-slide class="second">
-        <h2  style="color:green">爱，是有人等待</h2>
+      <swiper-slide class="second" v-show="currentIndex===1">
+        <slide2/>
       </swiper-slide>
-      <swiper-slide class="third">
-        <h2 style="color:yellow">爱，是团团圆圆</h2>
-        <img src="@/assets/img/speakoutlove.png" alt="">
+      <swiper-slide class="third" v-show="currentIndex===2">
+        <slide3/>
       </swiper-slide>
       <swiper-slide class="fourth"/>
       <swiper-slide class="fifth"/>
@@ -20,6 +19,9 @@
 <script>
 import {Swiper,SwiperSlide} from 'vue-awesome-swiper'
 import slide1 from '@/components/Slide1'
+import slide2 from '@/components/Slide2'
+import slide3 from '@/components/Slide3'
+import {swiperAnimate, swiperAnimateCache} from "@/common/swiper.animate.min";
 
 
 export default {
@@ -27,9 +29,12 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    slide1
+    slide1,
+    slide2,
+    slide3
   },
   data() {
+    let vm=this;
     return {
       currentIndex:0,
       swiperOption: {
@@ -42,13 +47,14 @@ export default {
           crossFade:true
         },
         on:{
-          slideChangeTransitionEnd(){
-            alert(this.activeIndex)
+          slideChange(){
+            vm.currentIndex=this.activeIndex
           }
         }
+        }
       }
-    }
-  }
+  },
+
 }
 
 </script>

@@ -3,18 +3,17 @@
     <div class="animate__animated animate__fadeIn">
       <h2 style="font-family: Ebrima;text-align: center;color:hotpink;font-size: 3rem">爱</h2>
     </div>
-    <div class="animate__animated animate__fadeInRight animate__delay-1s" >
-      <h2 style="font-family: Ebrima;text-align: center;color:hotpink;font-size: 3rem">是有人等待</h2>
+    <div class="animate__animated animate__fadeInDown animate__delay-1s" >
+      <h2 style="font-family: Ebrima;text-align: center;color:hotpink;font-size: 3rem">是团团圆圆</h2>
     </div>
+
   </div>
+
 </template>
 
 <script>
-
-
 export default {
-name: "Slide2",
-
+name: "Slide3"
 }
 </script>
 
