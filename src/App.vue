@@ -84,34 +84,34 @@ export default {
 
 .first{
   top: 0;
-  background: url("./assets/img/couplelove.jpg");
+  background: url("./assets/img/couplelove.png");
   background-size:calc(100vh) ;
   position: fixed;
   z-index: -1;
 }
 .second {
-  background: url("./assets/img/home.jpg");
+  background: url("./assets/img/home.png");
   background-size:calc(100vh) ;
   position: fixed;
   z-index: -1;
   top: 100vh;
 }
 .third{
-  background: url("./assets/img/redback.jpg");
+  background: url("./assets/img/redback.png");
   background-size:calc(100vh) ;
   position: fixed;
   z-index: -1;
   top: 200vh;
 }
 .fourth{
-  background: url("./assets/img/4back.jpg");
+  background: url("./assets/img/4back.png");
   background-size:calc(100vh) ;
   position: fixed;
   z-index: -1;
   top:300vh;
 }
 .fifth{
-  background: url("./assets/img/4back.jpg");
+  background: url("./assets/img/4back.png");
   background-size:calc(100vh);
   position: fixed;
   z-index: -1;

@@ -40,12 +40,12 @@ h2 {
 #neirong{
   position: absolute;
   width: 100%;
-  margin-top: -50%;
+  margin-top: -35%;
 }
 #blackboard{
   position: absolute;
   width: 100%;
-  margin-top: -18%;
+  margin-top: 0;
   z-index: -1;
 }
 

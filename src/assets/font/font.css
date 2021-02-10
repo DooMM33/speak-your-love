@@ -1,14 +1,4 @@
 @font-face {
-    font-family: 'QIJIFALLBACK';
-    src: url('./QIJIFALLBACK.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family:'zkkl';
     src: url("站酷快乐体2016修订版.ttf");
-}
-@font-face {
-    font-family: 'zkhy';
-    src: url("ZhanKuQingKeHuangYouTi-2.ttf");
 }
