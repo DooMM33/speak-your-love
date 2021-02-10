@@ -1,5 +1,15 @@
 <template>
-  <h2>hahahahah</h2>
+  <div>
+    <div class="animate__animated animate__fadeIn animate__delay-1s">
+      <h2>现在</h2>
+    </div>
+    <div class="animate__animated animate__bounceIn animate__delay-2s ">
+      <h2>大声说出爱吧</h2>
+    </div>
+    <div class="animate__animated animate__bounceIn animate__delay-3s">
+      <img src="@/assets/img/zi/erciyuan.png" alt="">
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,5 +19,17 @@ name: "Slide4"
 </script>
 
 <style scoped>
-
+  h2 {
+    margin-top: 10%;
+    text-align: center;
+    font-family: zkkl;
+    font-size: 3rem;
+    color: lightgoldenrodyellow;
+    text-shadow: 0 0 3px black;
+  }
+  img{
+    position: absolute;
+    width: 100%;
+    margin-top: 55%;
+  }
 </style>

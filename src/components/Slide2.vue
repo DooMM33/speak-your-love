@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="animate__animated animate__fadeIn">
-      <img src="@/assets/img/home.jpg" alt="">
-    </div>
     <div class="animate__animated animate__fadeIn animate__delay-1s">
       <h2>爱</h2>
     </div>
@@ -29,17 +26,5 @@ h2{
   font-size: 3rem;
   text-shadow: 0 0 5px palevioletred;
 }
-.second{
-  background: url("~@/assets/img/home.jpg");
-  top: 100vh;
-  background-size:calc(100vh) ;
-  position: fixed;
-  z-index: -1;
-}
-img{
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  z-index: -1;
-}
+
 </style>

@@ -1,20 +1,16 @@
 <template>
   <div>
-    <div class="animate__animated animate__fadeIn">
-      <img id="redback" src="@/assets/img/redback.jpg" alt="">
-    </div>
-    <div class="animate__animated animate__fadeIn">
-      <img src="@/assets/img/tuanyuan.png" alt="">
-    </div>
     <div class="animate__animated animate__fadeIn animate__delay-1s">
+      <img id="rice" src="@/assets/img/tuanyuan.png" alt="">
+      <img id="lamp" src="@/assets/img/lamp.png" alt="">
+    </div>
+    <div class="animate__animated animate__fadeIn animate__delay-2s">
       <h2>爱</h2>
     </div>
-    <div class="animate__animated animate__fadeInDown animate__delay-2s" >
+    <div class="animate__animated animate__fadeInDown animate__delay-3s" >
       <h2>是团团圆圆</h2>
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -25,24 +21,23 @@ name: "Slide3"
 
 <style scoped>
 h2{
-  margin-top: 20%;
+  margin-top: 23%;
   font-family: zkkl;
   text-align: center;
   color:antiquewhite;
   font-size: 3rem;
+}
 
-}
-#redback{
-  top: 0;
-  height: 100vh;
-  left: 0;
-  width: auto;
-  position: fixed;
-  z-index: -1;
-}
-img{
+#rice{
   height: 37vh;
   position: absolute;
-  top: 35%;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-30%,0);
+}
+#lamp{
+  width: 100vw;
+  position: absolute;
+  top: 0;
 }
 </style>
