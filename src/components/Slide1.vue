@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="animate__animated animate__fadeIn">
-      <h2 style="font-family: Ebrima;text-align: center;color:hotpink;font-size: 3rem">爱</h2>
+    <div class="animate__animated animate__fadeIn animate__delay-1s">
+      <h2>爱</h2>
     </div>
-    <div class="animate__animated animate__slideInLeft animate__delay-1s ">
-      <h2 style="font-family: Ebrima;text-align: center;color:hotpink;font-size: 3rem">是有人陪伴</h2>
+    <div class="animate__animated animate__slideInLeft animate__delay-2s ">
+      <h2 >是有人陪伴</h2>
     </div>
   </div>
 
@@ -22,7 +22,11 @@ name: "Slide1",
 <style scoped>
   h2{
     margin-top: 20%;
-    text-shadow: black;
+    text-shadow: 0 0 3px white;
+    font-family: zkkl;
+    text-align: center;
+    color:mediumpurple;
+    font-size: 3rem
   }
   div{
     animation-fill-mode: backwards,backwards;

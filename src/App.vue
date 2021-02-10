@@ -10,7 +10,9 @@
       <swiper-slide class="third" v-show="currentIndex===2">
         <slide3/>
       </swiper-slide>
-      <swiper-slide class="fourth"/>
+      <swiper-slide class="fourth">
+
+      </swiper-slide>
       <swiper-slide class="fifth"/>
     </swiper>
   </div>
@@ -49,10 +51,11 @@ export default {
         on:{
           slideChange(){
             vm.currentIndex=this.activeIndex
+            //alert(this.activeIndex)
           }
         }
-        }
       }
+    }
   },
 
 }
@@ -61,37 +64,21 @@ export default {
 
 <style scoped>
 @import '~@/assets/font/font.css';
-  swiper-slide{
-    height: 100vh;
-  }
+swiper-slide{
+  height: 100vh;
+}
 
-  .first{
-    top: 0;
-    background: url("~@/assets/img/couplelove.jpg");
-    background-size:calc(100vh) ;
-    position: fixed;
-    z-index: -1;
-  }
-  .second{
-    background: url("~@/assets/img/home.jpg");
-    top: 100vh;
-    background-size:calc(100vh) ;
-    position: fixed;
-    z-index: -1;
-  }
-  .third{
-    background: url("~@/assets/img/family.jpg");
-    top: 200vh;
-    background-size:100vw 100vh ;
-    position: fixed;
-    z-index: -1;
-  }
-  .third img{
-    width: 50vw;
-    height: 50vh;
-    left: 24%;
-    bottom: 25%;
-    z-index: 1;
-    position: absolute;
-  }
+.first{
+  top: 0;
+  background: url("~@/assets/img/couplelove.jpg");
+  background-size:calc(100vh) ;
+  position: fixed;
+  z-index: -1;
+}
+.second {
+  top: 100vh;
+}
+.third{
+  top: 200vh;
+}
 </style>
