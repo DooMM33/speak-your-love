@@ -4,7 +4,7 @@ import router from './router/index'
 import axios from 'axios'
 
 import {Button,Uploader,ImagePreview,Col,Row,Image as VanImage,Lazyload,
-        Icon} from "vant";
+        Icon,Dialog} from "vant";
 
 import 'swiper/css/swiper.min.css'
 import animate from 'animate.css'
@@ -19,7 +19,7 @@ Vue.use(Row)
 Vue.use(VanImage)
 Vue.use(Lazyload)
 Vue.use(Icon)
-
+Vue.use(Dialog)
 new Vue({
   render: h => h(App),
   router
