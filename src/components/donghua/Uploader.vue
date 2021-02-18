@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-uploader id="uploaders" v-model="pic" :after-read="afterRead" :preview-image=true :multiple="multiple">
+    <van-uploader id="uploaders" v-model="pic" :after-read="afterRead" :preview-image=true :max-count="maxcount">
     </van-uploader>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       pic: [],
-      multiple: false
+      maxcount:1,
     }
   },
   methods: {
