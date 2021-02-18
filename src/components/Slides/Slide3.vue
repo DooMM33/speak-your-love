@@ -10,6 +10,7 @@
     <div class="animate__animated animate__fadeInDown animate__delay-3s" >
       <h2>是团团圆圆</h2>
     </div>
+    <h5 class="bottomword"><van-icon name="down"/>下滑查看更多</h5>
   </div>
 </template>
 
@@ -39,5 +40,13 @@ h2{
   width: 100vw;
   position: absolute;
   top: 0;
+}
+.bottomword{
+  position: absolute;
+  bottom: 0;
+  color: indianred;
+  text-shadow: 0 0 2px black;
+  left: 35%;
+  font-size: 1rem;
 }
 </style>

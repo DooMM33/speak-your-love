@@ -14,12 +14,9 @@
         <slide4 v-show="currentIndex===3"/>
       </swiper-slide>
       <swiper-slide class="fifth">
-        <slide5 v-show="currentIndex===4"/>
-        <div v-show="currentIndex===4"
-            class="animate__animated animate__bounceInUp animate__delay-1s">
-          <van-button @click="changePage" type="primary"><p>现在试试吧</p></van-button>
-        </div>
+        <slide5 v-show="currentIndex===4" @changePage="changePage"/>
       </swiper-slide>
+
     </swiper>
   </div>
 </template>
@@ -118,17 +115,8 @@ swiper-slide{
   z-index: -1;
   top:400vh;
 }
-button{
-  position: absolute;
-  margin-top: 50vh;
-  width: 70%;
-  height: 10vh;
-  left: 15vw;
-  background-color: lightskyblue;
-  opacity: 0.9;
+#tabbar{
+  opacity: 0.5;
 }
-p{
-  font-family: zkkl;
-  font-size: 2rem;
-}
+
 </style>

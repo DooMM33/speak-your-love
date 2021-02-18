@@ -6,6 +6,7 @@
     <div class="animate__animated animate__fadeInRight animate__delay-2s" >
       <h2>是有人等待</h2>
     </div>
+    <h5 class="bottomword"><van-icon name="down"/>下滑查看更多</h5>
   </div>
 </template>
 
@@ -26,5 +27,12 @@ h2{
   font-size: 3rem;
   text-shadow: 0 0 5px palevioletred;
 }
-
+.bottomword{
+  position: absolute;
+  bottom: 0;
+  color: black;
+  text-shadow: 0 0 2px white;
+  left: 35%;
+  font-size: 1rem;
+}
 </style>

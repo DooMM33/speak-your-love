@@ -6,6 +6,7 @@
     <div class="animate__animated animate__slideInLeft animate__delay-2s ">
       <h2 >是有人陪伴</h2>
     </div>
+      <h5 class="bottomword"><van-icon name="down"/>下滑查看更多</h5>
   </div>
 
 </template>
@@ -30,5 +31,13 @@ name: "Slide1",
   }
   div{
     animation-fill-mode: backwards,backwards;
+  }
+  .bottomword{
+    position: absolute;
+    bottom: 0;
+    color: grey;
+    text-shadow: 0 0 2px black;
+    left: 35%;
+    font-size: 1rem;
   }
 </style>

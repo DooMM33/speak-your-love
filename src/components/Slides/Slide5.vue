@@ -13,6 +13,11 @@
       <img id="neirong" src="@/assets/img/zi/hdnr.png" alt="">
       <img id="blackboard" src="@/assets/img/blackboard.png" alt="">
     </div>
+    <div class="animate__animated animate__bounceInUp animate__delay-1s trying">
+      <van-button style="width: 65vw;height: 7vh"
+                  @click="$emit('changePage')"
+                  type="primary"><p>现在试试吧</p></van-button>
+    </div>
   </div>
 </template>
 
@@ -48,5 +53,17 @@ h2 {
   margin-top: 0;
   z-index: -1;
 }
-
+.trying{
+  position: absolute;
+  width: 65vw;
+  height: 7vh;
+ bottom: 44px;
+  left: 20%;
+  background-color: lightskyblue;
+  opacity: 0.9;
+}
+p{
+  font-family: zkkl;
+  font-size: 2rem;
+}
 </style>
