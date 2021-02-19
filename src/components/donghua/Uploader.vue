@@ -1,7 +1,13 @@
 <template>
   <div>
-    <van-uploader id="uploaders" v-model="pic" :after-read="afterRead" :preview-image=true :max-count="maxcount">
-    </van-uploader>
+    <div class="showUpload">
+      <p>上传图片</p>
+      <van-uploader id="uploaders" v-model="pic" :after-read="afterRead" :preview-image=true :max-count="maxcount" preview-size=80vw>
+        <template #default>
+          <van-button id="addPicture" type="primary" icon="plus" color="#f89917">添加照片</van-button>
+        </template>
+      </van-uploader>
+    </div>
   </div>
 </template>
 
@@ -26,5 +32,18 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scoped>
+ .showUpload{
+   margin-top: -4%;
+  width: 80vw;
+  height: calc(80vw);
+ }
+ p{
+   margin: 10px;
+   color: white;
+   bottom: 0;
+ }
+ #addPicture{
+   margin-top: 85%;
+ }
 </style>
