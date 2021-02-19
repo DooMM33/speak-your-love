@@ -1,5 +1,6 @@
 <template>
   <div>
+<!--  导航栏  -->
     <navbar/>
     <van-row type="flex" justify="center">
       <div class="Uploaderbk">
@@ -9,12 +10,14 @@
       </div>
       <span id="introduce">{{messages}}</span>
       <van-overlay :show="showOverlay">
-        <van-loading size="24px">{{text}}</van-loading>
+        <div class="loading">
+          <van-loading size="24px">{{text}}</van-loading>
+        </div>
       </van-overlay>
       <van-button id="uploads" type="primary" @click="uploads"><p>变成动漫</p></van-button>
     </van-row>
 <!--   明天这里写保存按钮的方法 -->
-    <van-dialog v-model="showDialog" show-cancel-button confirm-button-text="保存">
+    <van-dialog v-model="showDialog" show-cancel-button confirm-button-text="保存" >
       <img :src="src" alt="">
     </van-dialog>
   </div>
@@ -103,7 +106,7 @@ name: "DongHua",
     width: 90vw;
     height: calc(90vw);
     border: 2px solid black;
-    background-color: black;
+    background-color: #f89917;
   }
   .showUpload{
     text-align: center;
@@ -112,6 +115,7 @@ name: "DongHua",
     height: calc(80vw);
     border: 2px solid white;
     border-radius: 8px;
+    background-color: black;
   }
   p{
     font-size: 1.2rem;
@@ -127,5 +131,10 @@ name: "DongHua",
     width: 90%;
     font-family: simHei;
     text-shadow: 0 0 0.5px black;
+  }
+  .loading{
+    position: absolute;
+    top: 50%;
+    left: 32%;
   }
 </style>
