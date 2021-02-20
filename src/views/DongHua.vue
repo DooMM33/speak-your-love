@@ -18,7 +18,7 @@
       <van-button id="uploads" type="primary" @click="uploads"><p>变成动漫</p></van-button>
     </van-row>
     <van-dialog v-model="showDialog" show-cancel-button confirm-button-text="保存" :before-close="closeDialog">
-      <img :src="src" alt="">
+      <img id="dialogPic" :src="src" alt="">
     </van-dialog>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
     }
   },
   created() {
-    window.Toast = this.Toast
+    window.savePicture = this.savePicture
   },
   methods: {
     addPictureItem(file) {
@@ -71,13 +71,12 @@ export default {
       }).catch(() => {
       })
     },
+    savePicture(){
+      window.AndroidWaka.savePicture(this.src)
+    },
     closeDialog(action, done) {
       if (action === 'confirm') {
-        // AndroidWaKa.Toast() //好奇怪啊为什么html可以 vue不行
-
-        // window['AndroidWaka.Toast'] = ()=>{
-
-        // }
+        this.savePicture()
         console.log('已经保存');
         done()
       }
@@ -87,6 +86,7 @@ export default {
     },
     //上传图片
     realUploads() {
+      this.showOverlay = true
       var formData = new FormData();
       formData.append("userId", '00031524-9faa-4154-97de-71cfdeddca16')
       formData.append("picture", this.picture)
@@ -100,7 +100,6 @@ export default {
         contentType: false,   // 告诉axios不要去设置Content-Type请求头
         data: formData,
       }).then(res => {
-        this.showOverlay = true
         console.log(res)
         if (res.status == false) {
           this.showOverlay = false
@@ -169,4 +168,8 @@ p {
   top: 50%;
   left: 32%;
 }
+ #dialogPic{
+   height:70vh;
+   width: 100%;
+ }
 </style>
