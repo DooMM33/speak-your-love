@@ -4,7 +4,7 @@ import router from './router/index'
 import axios from 'axios'
 
 import {Button,Uploader,ImagePreview,Col,Row,Image as VanImage,Lazyload,
-        Icon,Dialog,Overlay,NavBar,Loading} from "vant";
+        Icon,Dialog,Overlay,NavBar,Loading,Toast} from "vant";
 
 import 'swiper/css/swiper.min.css'
 import animate from 'animate.css'
@@ -23,6 +23,7 @@ Vue.use(Dialog)
 Vue.use(Overlay)
 Vue.use(NavBar)
 Vue.use(Loading)
+Vue.use(Toast)
 
 new Vue({
   render: h => h(App),

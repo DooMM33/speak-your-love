@@ -22,7 +22,7 @@ export default {
     }
   },
   updated() {
-    if(this.pic.length!=0){
+    if((this.pic || []).length!=0){
       this.empty=false
     }else{
       this.empty=true

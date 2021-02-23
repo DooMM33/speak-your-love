@@ -61,7 +61,6 @@ export default {
         on:{
           slideChange(){
             vm.currentIndex=this.activeIndex
-            console.log(this.activeIndex)
           }
         }
       }

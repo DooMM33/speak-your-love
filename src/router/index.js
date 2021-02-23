@@ -20,6 +20,5 @@ export default new Router({
             path:'/xuanchuan',
             component:slides
         }
-    ],
-    mode:'history'
+    ]
 })

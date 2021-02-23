@@ -15,8 +15,10 @@
           <van-loading size="24px">{{ text }}</van-loading>
         </div>
       </van-overlay>
+
       <van-button id="uploads" type="primary" @click="uploads"><p>变成动漫</p></van-button>
     </van-row>
+    <!--  处理后图片弹窗显示  -->
     <van-dialog v-model="showDialog" show-cancel-button confirm-button-text="保存" :before-close="closeDialog">
       <img id="dialogPic" :src="src" alt="">
     </van-dialog>
@@ -51,25 +53,23 @@ export default {
   },
   methods: {
     addPictureItem(file) {
-      console.log(this.$refs.uploader.empty);
       this.picture = file.file
     },
     //弹窗询问
     uploads() {
-      Dialog.confirm({
-        message: '确定要将此图片动漫化吗?'
-      }).then(() => {
-        if(this.$refs.uploader.empty){
-          Dialog.alert({
-            message:'请添加图片'
-          })
-          return false
-        }
-        else{
+      if(this.$refs.uploader.empty){
+        Dialog.alert({
+          message:'请添加图片'
+        })
+      }
+      else{
+        Dialog.confirm({
+          message: '确定要将此图片动漫化吗?'
+        }).then(() => {
           this.realUploads()
-        }
-      }).catch(() => {
-      })
+        }).catch(() => {
+        })
+      }
     },
     savePicture(){
       window.AndroidWaka.savePicture(this.src)
@@ -77,7 +77,6 @@ export default {
     closeDialog(action, done) {
       if (action === 'confirm') {
         this.savePicture()
-        console.log('已经保存');
         done()
       }
       else{
@@ -93,6 +92,7 @@ export default {
       instance({
         url: '/waka/public/index.php/web/web/requestAnimalPictureByPicture',
         method: 'post',
+        timeout:5000,
         headers: {
           'Content-Type': 'multipart/form-data'
         },
@@ -100,8 +100,13 @@ export default {
         contentType: false,   // 告诉axios不要去设置Content-Type请求头
         data: formData,
       }).then(res => {
-        console.log(res)
-        if (res.status == false) {
+        if (res===undefined){
+          Dialog.alert({
+            message:'请检查网络或服务器繁忙'
+          })
+          this.showOverlay=false
+        }
+        else if (res.status == false) {
           this.showOverlay = false
           Dialog.alert({
             message: res.msg
@@ -112,7 +117,6 @@ export default {
           this.src = res.singleData
         }
       }).catch(err => {
-        console.log(err);
       })
     }
   }
